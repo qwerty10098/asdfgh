@@ -21,7 +21,7 @@
                     this.path = t, this.query = s, this.page = i, this.url = "", this.api = "", this.apiKey = ""
                 }
                 async movies() {
-                    this.api = "https://api.themoviedb.org/3/", this.apiKey = "1435e9957166a27ce5b8454de34e2591";
+                    this.api = "https://api.themoviedb.org/3/", this.apiKey = `1435e9957166a27ce5b8454de34e2591`;
                     const e = this.query,
                         t = this.page;
                     return this.url = `${this.api}${this.path}?api_key=${this.apiKey}&page=${t}&query=${e}`, "" === e && "" === t && this.url.includes("&query=") ? await fetch(this.url.replace("&page=&query=", "")).then((e => {
